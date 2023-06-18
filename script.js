@@ -110,3 +110,24 @@ function lessThan50(element, index, array) {
 }
 
 console.log(myEvery(arr4, lessThan50));
+
+/* Output:
+true
+*/
+
+function myReduce(arr, callback) {
+    let result = arr[0];
+    for (let i = 1; i < arr.length; i++)
+    {
+        result = callback(result, arr[i], i, arr);
+    }
+    return result;
+}
+
+let arr5 = [1,2,3,4,5];
+function addSum(result, element, index, array) {
+    return result + element;
+}
+
+let sum = myReduce(arr5, addSum);
+console.log(sum);
