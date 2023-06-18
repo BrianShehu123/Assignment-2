@@ -166,3 +166,21 @@ console.log(myIndexOf(arr7, 'horse', 2));
 console.log(myIndexOf(arr7, 'cat', 0));
 console.log(myIndexOf(arr7, 'fish', 0));
 
+
+/* Output:
+3
+1
+-1
+*/
+
+function myPush(arr , element) {
+    arr[arr.length] = element;
+}
+
+let arr8 = [1,2,3,4];
+myPush(arr8, 5);
+console.log(arr8);
+
+/* Output:
+[1,2,3,4,5]
+*/
