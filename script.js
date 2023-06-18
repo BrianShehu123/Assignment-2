@@ -10,12 +10,21 @@ function arr(element, index, array){
 
 myEach(arr0, arr);
 
+/*Output :
+1
+2
+3
+4
+5
+*/
 
-//function g(a,b,c,d)
+
+/*function g(a,b,c,d)
 //{
 //    console.log(a);
 //}
-//g(2,3);
+g(2,3);
+*/
 
 function myMap(arr, callback) 
 {
@@ -35,3 +44,24 @@ function squared(element, index, array) {
 let test1 = myMap(arr1, squared);
 console.log(test1);
 
+/* Output:
+[1,4,9,16,25]
+*/
+
+function myFilter(arr, callback) {
+    let newArr = [];
+    for (let i = 0; i< arr.length; i++) 
+        if (callback(arr[i], i, arr)) 
+            newArr.push(arr[i]);
+
+            return newArr;
+}
+
+let arr2 = ['tired', 'swimming', 'eating', 'sleeping', 'car', 'food', 'water'];
+function compareLength(element, index, array) {
+    if (element.length > 5)
+    return true;
+}
+
+let test2 = myFilter(arr2, compareLength);
+console.log(test2);
