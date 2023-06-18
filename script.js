@@ -224,3 +224,18 @@ function grabKeys (obj) {
 
 let obj0 = { a: "Hello", b: "There", c: "How" , d: "Are", e: "You" };
 console.log(grabKeys(obj0));
+
+/* Output:
+[ 'a', 'b', 'c', 'd', 'e' ]
+*/
+
+function grabValues (obj) {
+    let arr = [];
+    for (let value in obj) {
+        arr.push(obj[value]);
+    }
+    return arr;
+}
+
+let obj1 = { a: "Hello", b: "There", c: "How", d: "Are", e: "You" };
+console.log(grabValues(obj1));
