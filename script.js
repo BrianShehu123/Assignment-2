@@ -184,3 +184,43 @@ console.log(arr8);
 /* Output:
 [1,2,3,4,5]
 */
+
+function myLastIndexOf(arr, element) {
+    let index;
+    for (let i = 0 ; i < arr.length; i++) 
+    
+        if (arr[i] === element) 
+        
+            index = i;
+        
+        if (!!index)
+        
+            return index;
+        
+        else
+        
+            return -1;
+        
+    
+}
+
+let arr9 = ['dog', 'cat', 'rabbit', 'horse', 'elephant'];
+console.log(myLastIndexOf(arr9, 'elephant'));
+console.log(myLastIndexOf(arr9, 'fish'));
+
+/* Output:
+4
+-1
+*/
+
+
+function grabKeys (obj) {
+    let arr = [];
+    for (let key in obj) {
+        arr.push(key);
+    }
+    return arr;
+}
+
+let obj0 = { a: "Hello", b: "There", c: "How" , d: "Are", e: "You" };
+console.log(grabKeys(obj0));
