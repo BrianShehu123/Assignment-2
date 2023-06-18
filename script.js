@@ -1,3 +1,6 @@
+
+//myEach function will take an array and a callback function so it will call the callback function for each element in the array.
+
 function myEach(arr, callback) {
     for (let i = 0; i < arr.length; i++) 
     callback(arr[i], i, arr);
@@ -26,6 +29,7 @@ myEach(arr0, arr);
 g(2,3);
 */
 
+//myMap function will take an array and a callback function so it will call the callback function for each element in the array. 
 function myMap(arr, callback) 
 {
     let newArr = [];
@@ -239,3 +243,32 @@ function grabValues (obj) {
 
 let obj1 = { a: "Hello", b: "There", c: "How", d: "Are", e: "You" };
 console.log(grabValues(obj1));
+
+/* Output:
+[ 'Hello', 'There', 'How', 'Are', 'You' ]
+*/
+
+function moveZeros(num){
+    let left = 0;
+    let right = 0;
+
+    while (right < num.length) {
+        if (num[right]!== 0) {
+            [num[left] , num[right]] = [num[right], num[left]];
+            left++;
+        }
+        right++;
+    }
+}
+
+let arr10 = [1, 2, 0, 0, 5, 0, 7]
+moveZeros(arr10);
+console.log(arr10);
+
+
+/* Output:
+[ 
+    1, 2, 5, 7
+    0, 0, 0
+]
+*/
