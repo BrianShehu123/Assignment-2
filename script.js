@@ -152,3 +152,17 @@ console.log(myIncludes(arr6, 'fish'));
 false
 */
 
+function myIndexOf(arr, element, startIndex) {
+    for (let i = startIndex; i < arr.length; i++) 
+    {
+        if (arr[i] === element) 
+            return i;
+    }
+    return -1;
+}
+
+let arr7 = ['dog', 'cat', 'rabbit', 'horse', 'elephant'];
+console.log(myIndexOf(arr7, 'horse', 2));
+console.log(myIndexOf(arr7, 'cat', 0));
+console.log(myIndexOf(arr7, 'fish', 0));
+
