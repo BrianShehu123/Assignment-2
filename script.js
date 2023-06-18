@@ -131,3 +131,24 @@ function addSum(result, element, index, array) {
 
 let sum = myReduce(arr5, addSum);
 console.log(sum);
+
+/* Output:
+15
+*/
+
+function myIncludes(arr, element) {
+    for (let i of arr)
+    {
+        if (i === element) 
+            return true;
+    }
+    return false;
+}
+
+let arr6 = ['dog', 'cat', 'rabbit', 'horse', 'elephant'];
+console.log(myIncludes(arr6, 'fish'));
+
+/* Output:
+false
+*/
+
