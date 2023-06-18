@@ -90,3 +90,23 @@ function isEven(element, index, array) {
 }
 
 console.log(mySome(arr3, isEven));
+
+/* Output:
+true
+*/
+
+function myEvery(arr, callback) {
+    for (let i = 0; i < arr.length; i++) 
+    {
+        if (!callback(arr[i], i, arr)) 
+            return false;
+    }
+    return true;
+}
+
+let arr4 = [10,20,30,40,50];
+function lessThan50(element, index, array) {
+    return element < 60;
+}
+
+console.log(myEvery(arr4, lessThan50));
