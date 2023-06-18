@@ -65,3 +65,28 @@ function compareLength(element, index, array) {
 
 let test2 = myFilter(arr2, compareLength);
 console.log(test2);
+
+/* Output:
+['swimming', 'eating', 'sleeping']
+*/
+
+function mySome(arr, callback) {
+    for (let i = 0; i < arr.length; i++) 
+    {
+        if (callback(arr[i], i, arr)) 
+            return true;
+    }
+    return false;
+}
+
+let arr3 = [1,2,3,4,5];
+function isEven(element, index, array) {
+    for (let i = 0; i < array.length; i++) 
+    {
+        if (element % 2 === 0) 
+            return true;
+    }
+    return false;
+}
+
+console.log(mySome(arr3, isEven));
