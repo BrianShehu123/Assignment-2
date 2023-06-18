@@ -11,9 +11,27 @@ function arr(element, index, array){
 myEach(arr0, arr);
 
 
-function g(a,b,c,d)
+//function g(a,b,c,d)
+//{
+//    console.log(a);
+//}
+//g(2,3);
+
+function myMap(arr, callback) 
 {
-    console.log(a);
+    let newArr = [];
+    for (let i = 0; i < arr.length; i++) 
+    {
+        newArr.push(callback(arr[i], i, arr));
+    }
+    return newArr;
 }
-g(2,3);
+
+let arr1 = [1,2,3,4,5];
+function squared(element, index, array) {
+    return element * element;
+}
+
+let test1 = myMap(arr1, squared);
+console.log(test1);
 
